@@ -54,21 +54,21 @@ Node *insert(Node *root, int val)
     return root;
 }
 
-Node *searchNode(Node *root, int valDaCercare)
+Node *searchNode(Node *root, int searchedValue)
 {
     Node * current = root;
 
     while (current != nullptr)
     {
-        if (valDaCercare > current ->val)
+        if (searchedValue > current ->val)
         {
             current = current -> rightChild;
         }
-        else if (valDaCercare < current -> val)
+        else if (searchedValue < current -> val)
         {
             current = current -> leftChild;
         }
-        else if (valDaCercare == current -> val)
+        else if (searchedValue == current -> val)
         {
             return current;
         }
